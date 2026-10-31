@@ -176,6 +176,42 @@
 	  }
 	}
 
+	
+	/* Google Maps Venue Link */
+	.map-link {
+	  display: inline-flex;
+	  align-items: center;
+	  justify-content: center;
+	  gap: 6px;
+	  margin-top: 8px;
+	  padding: 8px 12px;
+	  border-radius: 20px;
+	  text-decoration: none;
+	  font-size: 13px;
+	  font-weight: 500;
+	  transition: all 0.3s ease;
+	  background: rgba(255,255,255,0.65);
+	}
+
+	.bride .map-link {
+	  color: #a65375;
+	  border: 1px solid #edc3d4;
+	}
+
+	.groom .map-link {
+	  color: #496e9d;
+	  border: 1px solid #c4d8f5;
+	}
+
+	.map-link:hover {
+	  transform: translateY(-2px);
+	  background: white;
+	}
+
+	.map-arrow {
+	  font-size: 12px;
+	}
+
   </style>
 </head>
 <body>
@@ -229,7 +265,7 @@
 		<div class="kicker">Save the dates for the</div>
 		<h2>The Celebration</h2>
 		<p class="intro">Join us to make this memorable</p>
-		<p> </p>
+		
 
 		<div class="event-grid">
 		
@@ -239,31 +275,42 @@
 			  <img src="images/engagement-cartoon.png" alt="Cute cartoon engagement">
 			</div>
 			<div class="number">01</div>
-			<h3>Mehendi</h3>
-			<p>Friday · 4:00 PM</p>
-			<p>Family home / venue name</p>
+			<h3>Engagement</h3>
+			<p>Falgun 1 (Sat) · 11:00 AM</p>
+			<p>Family Home · Jhapa </p>
 		  </article>
 
-		  <!-- Bride's Event -->
-		  <article class="event bride">
-			<div class="event-illustration">
-			  <img src="images/bride-cartoon.png" alt="Cute cartoon bride">
-			</div>
-			<div class="number">01</div>
-			<h3>Mehendi</h3>
-			<p>Friday · 4:00 PM</p>
-			<p>Family home / venue name</p>
-		  </article>
+
+		<!-- Bride's Event -->
+		<article class="event bride">
+		  <div class="event-illustration">
+			<img src="images/bride-cartoon.png" alt="Cute cartoon bride">
+		  </div>
+
+		  <div class="number">02</div>
+		  <h3>Mehendi</h3>
+		  <p>Falgun 7 (Fri) · 4:00 PM</p>
+
+		  <a
+			href="https://maps.app.goo.gl/xSbuNHaz8XeroY9c9"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="map-link">
+			<span>📍</span> Family Home
+			<span class="map-arrow">↗</span>
+		  </a>
+		</article>
+
 
 		  <!-- Groom’s Event -->
 		  <article class="event groom">
 			<div class="event-illustration">
 			  <img src="images/groom-cartoon.png" alt="Cute cartoon groom">
 			</div>
-			<div class="number">02</div>
+			<div class="number">03</div>
 			<h3>Wedding Ceremony</h3>
-			<p>Saturday · 10:00 AM</p>
-			<p>Wedding venue · Kathmandu, Nepal</p>
+			<p>Falgun 11 (Tue) · 8:00 AM</p>
+			<p>Wedding venue · Jhapa</p>
 		  </article>
 
 		  <!-- Shared Event -->
@@ -271,10 +318,10 @@
 			<div class="event-illustration">
 			  <img src="images/couple-cartoon.png" alt="Cute cartoon bride and groom">
 			</div>
-			<div class="number">03</div>
+			<div class="number">04</div>
 			<h3>Reception</h3>
-			<p>Saturday · 6:00 PM</p>
-			<p>Reception venue / address</p>
+			<p>Falgun 14 (Fri) · 5:00 PM</p>
+			<p>Reception venue · Kathmandu</p>
 		  </article>
 
 		</div>

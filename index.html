@@ -267,8 +267,8 @@
 
     .hero {
       width: 100%;
-      min-height: 100vh;
-      min-height: 100svh;
+      min-height: auto !important; padding-bottom: 5px !important;
+      min-height: 80svh;
       padding: clamp(110px, 13vh, 150px) clamp(28px, 17.5vw, 250px) 80px;
       display: flex;
       align-items: center;
@@ -281,6 +281,11 @@
       background-size: cover, cover;
       background-position: center, center;
     }
+	#story {
+    padding-top: 5px !important;
+    margin-top: 0 !important;
+}
+
     .hero-content {
       width: min(650px, 100%);
       max-width: 650px;
@@ -397,9 +402,9 @@
   <main>
     <section class="hero" id="home">
       <div class="hero-content">
-        <div class="eyebrow">Together with our families</div>
+        <div class="kicker">Together with our families</div>
         <img src="images/suman_priya.png" alt="Priyanka & Suman" class="couple-logo">
-        <div class="eyebrow">A celebration of love · 23 February 2027</div>
+        <div class="kicker">A celebration of love · 23 February 2027</div>
         <p class="hero-note">Two hearts, two families, one beautiful story.</p>
         <a class="button" href="#story">Our Message</a>
       </div>

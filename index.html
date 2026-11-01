@@ -31,9 +31,27 @@
     nav a { text-decoration: none; opacity: .92; }
     nav a:hover { color: #f2d8a8; }
     .hero { min-height: 92vh; display: grid; place-items: center; text-align: center; color: white; padding: 110px 24px 80px; position: relative; overflow: hidden; background: linear-gradient(135deg, rgba(43,35,32,.78), rgba(91,55,53,.48)), radial-gradient(ellipse at 20% 20%, #a58a75, transparent 45%), linear-gradient(135deg, #65524b, #a78a76 48%, #463638); }
-    .hero::before, .hero::after { content: ""; position: absolute; width: 360px; height: 360px; border: 1px solid rgba(255,255,255,.24); border-radius: 50%; }
-    .hero::before { top: -190px; left: -110px; }
-    .hero::after { bottom: -230px; right: -80px; width: 480px; height: 480px; }
+    .hero::before, .hero::after {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border: 1px solid rgba(145,184,220,0.45);
+    border-radius: 50%;
+    pointer-events: none;
+	}
+
+	.hero::before {
+		top: -190px;
+		left: -110px;
+	}
+
+	.hero::after {
+		bottom: -230px;
+		right: -80px;
+		width: 480px;
+		height: 480px;
+	}
     .hero-content { position: relative; z-index: 1; max-width: 850px; }
     .eyebrow { text-transform: uppercase; letter-spacing: .28em; font-size: .72rem; }
     h1 { font: 400 clamp(3.4rem, 9vw, 7.8rem)/.98 var(--serif); margin: 22px 0; letter-spacing: -.045em; }
@@ -565,7 +583,7 @@
             </label>
             <label>Number of guests
               <select name="guests">
-                <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
+                <option>1</option><option>2</option><option>3</option>
               </select>
             </label>
             <label>A note for the couple

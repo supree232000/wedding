@@ -39,7 +39,7 @@
     h1 { font: 400 clamp(3.4rem, 9vw, 7.8rem)/.98 var(--serif); margin: 22px 0; letter-spacing: -.045em; }
     .amp { color: #e8c995; font-style: italic; }
     .hero-date { margin-top: 28px; font-size: .9rem; letter-spacing: .2em; text-transform: uppercase; }
-    .hero-note { max-width: 540px; margin: 22px auto 0; color: #f4ece5; font-family: var(--serif); font-style: normal; font-size: 1.0rem; }
+    .hero-note { max-width: 740px; margin: 22px auto 0; color: #783f45; font-family: var(--serif); font-style: normal; font-size: 1.0rem; }
     .button { display: inline-block; margin-top: 30px; padding: 13px 23px; border: 1px solid rgba(255,255,255,.7); color: #783f45;; text-decoration: none; font-size: .75rem; letter-spacing: .15em; text-transform: uppercase; transition: .2s; }
     .button:hover { background: white; color: var(--wine); }
     .section { padding: 92px 22px; }
@@ -285,7 +285,6 @@
       width: min(650px, 100%);
       max-width: 650px;
 	  color: #783f45;
-	  font-size: 0.85em;
     }
     .hero h1 {
     font-family: 'Allura', cursive !important;
@@ -367,6 +366,23 @@
       .hero h1 { font-size: clamp(4.8rem, 18.5vw, 5.8rem); }
     }
 
+	/* Priyanka & Suman transparent calligraphy logo */
+	.couple-logo {
+		display: block;
+		width: min(680px, 90%);
+		height: auto;
+		object-fit: contain;
+		margin: 55px 0 65px;
+	}
+
+	/* Mobile layout */
+	@media (max-width: 700px) {
+		.couple-logo {
+			width: 100%;
+			max-width: 480px;
+			margin: 45px 0 50px;
+		}
+	}
   </style>
 </head>
 <body>
@@ -382,7 +398,7 @@
     <section class="hero" id="home">
       <div class="hero-content">
         <div class="eyebrow">Together with our families</div>
-        <h2>Priyanka & Suman</h2>
+        <img src="images/suman_priya.png" alt="Priyanka & Suman" class="couple-logo">
         <div class="eyebrow">A celebration of love · 23 February 2027</div>
         <p class="hero-note">Two hearts, two families, one beautiful story.</p>
         <a class="button" href="#story">Our Message</a>

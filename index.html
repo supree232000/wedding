@@ -285,16 +285,19 @@
 
     .hero {
       width: 100%;
-      min-height: 100vh;
-    min-height: 100svh;
-    padding: 105px 8vw 65px;
-    align-items: center;
-    background-color: #ffffff;
-    background-image:
-        linear-gradient(90deg, rgba(255,255,255,0.96), rgba(255,255,255,0.90)),
-        url("images/floral-mobile.svg");
-    background-size: cover, 100% 100%;
-    background-position: center, center;
+      min-height: auto !important; padding-bottom: 5px !important;
+      min-height: 80svh;
+      padding: clamp(110px, 13vh, 150px) clamp(28px, 17.5vw, 250px) 80px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: left;
+      background-color: #f3eee6;
+      background-image:
+        linear-gradient(90deg, rgba(243,238,230,.96) 0%, rgba(243,238,230,.88) 46%, rgba(243,238,230,.20) 100%),
+        url("images/floral-hero.svg");
+      background-size: cover, cover;
+      background-position: center, center;
     }
 	#story {
     padding-top: 5px !important;
@@ -417,8 +420,8 @@
   <main>
     <section class="hero" id="home">
       <div class="hero-content">
-        <img src="images/suman_priya_name.webp" alt="Priyanka & Suman" class="couple-logo">
-        <div class="hero-invite">28 February 2027</div>
+        <img src="images/suman_priya_name_bgr.png" alt="Priyanka & Suman" class="couple-logo">
+        <div class="hero-invite">23 February 2027</div>
       <!-- <a class="button" href="#story">Join us</a> -->
       </div>
     </section>

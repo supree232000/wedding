@@ -406,6 +406,44 @@
 			margin: 45px 0 50px;
 		}
 	}
+	
+	/* Toddler picture and accompanying text */
+	.hero-couple-row {
+		display: flex;
+		align-items: center;
+		gap: 25px;
+	}
+
+	.hero-side-text {
+		font-family: 'Allura', cursive;
+		font-size: clamp(2.5rem, 4vw, 4rem);
+		line-height: 1.05;
+		text-align: right;
+		color: #302b27;
+		white-space: nowrap;
+	}
+
+	.hero-couple-row .couple-logo {
+		width: min(480px, 65%);
+		margin: 20px 0;
+	}
+
+	/* Mobile layout */
+	@media (max-width: 700px) {
+		.hero-couple-row {
+			gap: 10px;
+		}
+
+		.hero-side-text {
+			font-size: clamp(1.7rem, 6vw, 2.5rem);
+			white-space: normal;
+		}
+
+		.hero-couple-row .couple-logo {
+			width: 58%;
+			margin: 20px 0;
+		}
+	}
   </style>
 </head>
 <body>
@@ -419,12 +457,23 @@
 
   <main>
     <section class="hero" id="home">
-      <div class="hero-content">
-        <img src="images/suman_priya_name_bgr.png" alt="Priyanka & Suman" class="couple-logo">
-        <div class="hero-invite">28 February 2027</div>
-      <!-- <a class="button" href="#story">Join us</a> -->
-      </div>
-    </section>
+	  <div class="hero-content">
+
+		<div class="hero-couple-row">
+		  <img src="images/toddler_us.png"
+			   alt="Priyanka & Suman"
+			   class="couple-logo">
+
+		  <div class="hero-side-text">
+			These two are<br>
+			getting married
+		  </div>
+		</div>
+
+		<div class="hero-invite">28 February 2027</div>
+
+	  </div>
+	</section>
 
     <section class="section center">
       <div class="inner">
@@ -520,7 +569,7 @@
 		  </article>
 
 		  <!-- Shared Event (Reception) -->
-		  <article class="event bride">
+		  <article class="event groom">
 			<div class="event-illustration">
 			  <img src="images/couple-cartoon.webp" alt="Cute cartoon bride and groom">
 			</div>

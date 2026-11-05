@@ -451,6 +451,28 @@
 			margin: 20px 0;
 		}
 	}
+	
+	/* Fix unwanted extra scrolling on mobile */
+	@media (max-width: 700px) {
+		html, body {
+			width: 100%;
+			overflow-x: hidden;
+		}
+
+		footer {
+			margin-bottom: 0;
+			padding-bottom: 30px;
+		}
+
+		footer .closing {
+			margin: 0;
+			line-height: 1.2;
+		}
+
+		footer p {
+			margin-bottom: 0;
+		}
+	}
   </style>
 </head>
 <body>

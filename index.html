@@ -474,15 +474,22 @@
 		}
 	}
 	
-	/* WhatsApp contact */
+	@media (max-width: 430px) {
+		.contact-portrait {
+			width: 80px;
+			height: 80px;
+		}
+	}
+	
+	/* WhatsApp contact section */
 	.whatsapp-contact {
-		margin-top: 0px;
+		margin-top: 50px;
 		text-align: center;
 	}
 
 	.whatsapp-contact h3 {
 		font-family: Georgia, serif;
-		font-size: 1.6rem;
+		font-size: 1.7rem;
 		font-weight: 400;
 		color: #783f45;
 	}
@@ -492,28 +499,68 @@
 		font-size: 0.9rem;
 	}
 
+	.whatsapp-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 25px;
+		max-width: 620px;
+		margin: 30px auto 0;
+		align-items: stretch;
+	}
+
+	.whatsapp-card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		padding: 25px 15px;
+		background: #fffdf8;
+		border: 1px solid #e6d9c9;
+		border-radius: 14px;
+		text-align: center;
+	}
+	/* Bride and groom portraits */
+	.contact-portrait {
+		width: 105px;
+		height: 105px;
+		object-fit: cover;
+		object-position: center;
+		border-radius: 50%;
+		border: 3px solid #e6d9c9;
+		margin: 0 auto 20px;
+		display: block;
+	}
+	.whatsapp-card h4 {
+		font-family: Georgia, serif;
+		font-size: 1.5rem;
+		font-weight: 400;
+		color: #783f45;
+		margin: 0 0 20px;
+		text-align: center;
+	}
+
 	.whatsapp-qr {
 		display: block;
-		width: 170px;
-		height: 170px;
+		width: 155px;
+		height: 155px;
 		object-fit: contain;
-		margin: 20px auto;
-		padding: 8px;
+		margin: 0 auto 20px;
+		padding: 6px;
 		background: white;
-		border: 1px solid #e6d9c9;
-		border-radius: 10px;
 	}
 
 	.whatsapp-button {
 		display: inline-flex;
 		align-items: center;
-		gap: 10px;
-		padding: 13px 22px;
+		justify-content: center;
+		margin: 0 auto;
+		padding: 11px 18px;
 		background: #25D366;
 		color: white !important;
 		text-decoration: none;
-		border-radius: 30px;
+		border-radius: 25px;
 		font-size: 0.85rem;
+		text-align: center;
 		transition: 0.2s;
 	}
 
@@ -521,11 +568,25 @@
 		background: #1da851;
 	}
 
-	.whatsapp-button img {
-		width: 21px;
-		height: 21px;
-		object-fit: contain;
-	}
+	@media (max-width: 430px) {
+		.whatsapp-grid {
+			gap: 12px;
+		}
+
+		.whatsapp-card {
+			padding: 20px 8px;
+		}
+
+		.whatsapp-qr {
+			width: 120px;
+			height: 120px;
+		}
+
+		.whatsapp-button {
+			padding: 10px 12px;
+			font-size: 0.75rem;
+		}
+}
   </style>
 </head>
 <body>
@@ -729,24 +790,56 @@
       </div>
     </section> ----!>
 	<section class="section contact-section" id="contact">
-	<div class="whatsapp-contact">
-		<h3>Contact</h3>
-		<!---<p>Scan the QR code or tap below to connect with us.</p>---!>
+<div class="whatsapp-contact">
+    <h3>Contact</h3>
+    <!---<p>Choose whom you'd like to contact.</p>---!>
 
-		<img
-			src="images/whatsapp_qr.jpeg"
-			alt="WhatsApp contact QR code"
-			class="whatsapp-qr">
+    <div class="whatsapp-grid">
 
-		<a
-			href="https://wa.me/9779700047227"
-			class="whatsapp-button"
-			target="_blank"
-			rel="noopener noreferrer">
-			<img src="images/whatsapp-icon.png" alt="">
-			WhatsApp
-		</a>
-	</div>
+        <!-- Groom's Contact -->
+		<div class="whatsapp-card">
+			<img
+				src="images/groom-cartoon.png"
+				alt="Groom"
+				class="contact-portrait">
+
+			<img
+				src="images/whatsapp_his_qr.jpeg"
+				alt="Groom's WhatsApp QR code"
+				class="whatsapp-qr">
+
+			<a
+				href="https://wa.me/9779700047227"
+				class="whatsapp-button"
+				target="_blank"
+				rel="noopener noreferrer">
+				WhatsApp Him
+			</a>
+		</div>
+
+		<!-- Bride's Contact -->
+		<div class="whatsapp-card">
+			<img
+				src="images/bride-cartoon.png"
+				alt="Bride"
+				class="contact-portrait">
+
+			<img
+				src="images/whatsapp-her-qr.png"
+				alt="Bride's WhatsApp QR code"
+				class="whatsapp-qr">
+
+			<a
+				href="https://wa.me/14376011225"
+				class="whatsapp-button"
+				target="_blank"
+				rel="noopener noreferrer">
+				WhatsApp Her
+			</a>
+		</div>
+
+    </div>
+</div>
 	</section>
   </main>
 

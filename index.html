@@ -473,6 +473,59 @@
 			margin-bottom: 0;
 		}
 	}
+	
+	/* WhatsApp contact */
+	.whatsapp-contact {
+		margin-top: 0px;
+		text-align: center;
+	}
+
+	.whatsapp-contact h3 {
+		font-family: Georgia, serif;
+		font-size: 1.6rem;
+		font-weight: 400;
+		color: #783f45;
+	}
+
+	.whatsapp-contact p {
+		color: #756b62;
+		font-size: 0.9rem;
+	}
+
+	.whatsapp-qr {
+		display: block;
+		width: 170px;
+		height: 170px;
+		object-fit: contain;
+		margin: 20px auto;
+		padding: 8px;
+		background: white;
+		border: 1px solid #e6d9c9;
+		border-radius: 10px;
+	}
+
+	.whatsapp-button {
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		padding: 13px 22px;
+		background: #25D366;
+		color: white !important;
+		text-decoration: none;
+		border-radius: 30px;
+		font-size: 0.85rem;
+		transition: 0.2s;
+	}
+
+	.whatsapp-button:hover {
+		background: #1da851;
+	}
+
+	.whatsapp-button img {
+		width: 21px;
+		height: 21px;
+		object-fit: contain;
+	}
   </style>
 </head>
 <body>
@@ -480,7 +533,8 @@
     <nav aria-label="Main navigation">
       <a href="#story">Our message</a>
       <a href="#events">Events</a>
-      <a href="#rsvp">RSVP</a>
+      <!---<a href="#rsvp">RSVP</a>---!>
+	  <a href="#contact">Contact</a>
     </nav>
   </header>
 
@@ -637,7 +691,7 @@
       </div>
     </section>
 
-    <section class="section" id="rsvp">
+<!----<section class="section" id="rsvp">
       <div class="inner rsvp-wrap">
         <aside class="rsvp-aside">
           <div class="kicker">We hope you can join us</div>
@@ -673,7 +727,27 @@
           </form>
         </div>
       </div>
-    </section>
+    </section> ----!>
+	<section class="section contact-section" id="contact">
+	<div class="whatsapp-contact">
+		<h3>Contact</h3>
+		<!---<p>Scan the QR code or tap below to connect with us.</p>---!>
+
+		<img
+			src="images/whatsapp_qr.jpeg"
+			alt="WhatsApp contact QR code"
+			class="whatsapp-qr">
+
+		<a
+			href="https://wa.me/9779700047227"
+			class="whatsapp-button"
+			target="_blank"
+			rel="noopener noreferrer">
+			<img src="images/whatsapp-icon.png" alt="">
+			WhatsApp
+		</a>
+	</div>
+	</section>
   </main>
 
   <footer>
@@ -705,7 +779,6 @@
     }
     updateCountdown();
     setInterval(updateCountdown, 1000);
-
     // Paste your deployed Google Apps Script Web App URL here.
     const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz34BoZmWSv0DVfoX7VOAbgvWOZSSctUltqibQTvfe9TLD2LjqcfPd_nlTGxRIGt4ZH/exec";
 
